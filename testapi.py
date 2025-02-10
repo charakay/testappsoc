@@ -3,10 +3,9 @@ import logging
 
 app = FastAPI()
 
-# API Token (this will be "leaked" in the attack simulation)
+
 API_TOKEN = "supersecrettoken123"
 
-# Configure logging
 logging.basicConfig(filename="api_requests.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
 def verify_token(request: Request):
